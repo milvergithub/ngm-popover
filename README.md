@@ -1,72 +1,78 @@
-# ngm-popover
-This a library inspired in webuipopover
-## Installation
+# ngm-popover  
+![Screenshot](screenshot.png)
+# Demo
+This library support to angular 4, 5 and 6.  There are many options for customize your table you can customize everything cell and everything
+# Demo
+<https://demo-ngm-popover.stackblitz.io>
 
-To install this library, run:
-
-```bash
-$ npm install ngm-popover --save
-```
-
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install ngm-popover --save
-```
-
-and then from your Angular `AppModule`:
-
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-
-// Import your library
-import { SampleModule } from 'ngm-popover';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
-
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
-```
-
-## Development
-
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
-
-```bash
-$ npm run build
-```
-
-To lint all `*.ts` files:
-
-```bash
-$ npm run lint
-```
-
-## License
-
+<https://stackblitz.com/edit/demo-ngm-popover>
+## Installation  
+  
+To install this library, run:  
+  
+```bash  
+$ npm install ngm-popover --save  
+```  
+  
+## Consuming your library  
+  
+Once you have published your library to npm, you can import your library in any Angular application by running:  
+  
+```bash  
+$ npm install ngm-popover --save  
+```  
+  
+and then from your Angular `AppModule`:  
+  
+```typescript  
+import { BrowserModule } from '@angular/platform-browser';  
+import { NgModule } from '@angular/core';  
+  
+import { AppComponent } from './app.component';  
+  
+// Import your library  
+import { SampleModule } from 'ngm-popover';  
+  
+@NgModule({  
+  declarations: [  
+    AppComponent  
+  ],  
+  imports: [  
+    BrowserModule,  
+  
+    // Specify your library as an import  
+    LibraryModule  
+  ],  
+  providers: [],  
+  bootstrap: [AppComponent]  
+})  
+export class AppModule { }  
+```  
+  
+Once your library is imported, you can use its components, directives and pipes in your Angular application:  
+  
+```xml  
+<!-- You can now use your library component in app.component.html -->  
+<h1>  
+  {{title}}  
+</h1>  
+<sampleComponent></sampleComponent>  
+```  
+  
+## Development  
+  
+To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:  
+  
+```bash  
+$ npm run build  
+```  
+  
+To lint all `*.ts` files:  
+  
+```bash  
+$ npm run lint  
+```  
+  
+## License  
+  
 MIT © [Milver Flores Acevedo](mailto:mfflowg@gmail.com)
