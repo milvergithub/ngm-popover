@@ -1,7 +1,7 @@
 # ngm-popover  
 ![Screenshot](screenshot.png)
-# Demo
-This library support to angular 4, 5 and 6.  There are many options for customize your table you can customize everything cell and everything
+
+This library support to angular 4, 5, 6 and 7.  There are  options to 
 # Demo
 <https://demo-ngm-popover.stackblitz.io>
 
@@ -14,6 +14,12 @@ To install this library, run:
 $ npm install ngm-popover --save  
 ```  
   
+  ##  Options
+  | Function name | Description                  |
+| ------------- | ------------------------------ |
+| `maxWidth`    | The default value is `400px`. this value it's going to set in the style `max-width`  |
+| `minWidth`    | The default value is `200px`.  this value it's going to set in the style `min-width`|
+| `placement`    | The default value is `auto` but you can to change the value with these options `bottom-right` , `bottom-left`, `top-left`, `top-right`, `right`, `left`, `top` and `bottom`|
 ## Consuming your library  
   
 Once you have published your library to npm, you can import your library in any Angular application by running:  
@@ -31,7 +37,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';  
   
 // Import your library  
-import { SampleModule } from 'ngm-popover';  
+import  { NgmPopoverModule }  from  'ngm-popover';  
   
 @NgModule({  
   declarations: [  
@@ -41,7 +47,7 @@ import { SampleModule } from 'ngm-popover';
     BrowserModule,  
   
     // Specify your library as an import  
-    LibraryModule  
+    NgmPopoverModule.forRoot()
   ],  
   providers: [],  
   bootstrap: [AppComponent]  
@@ -53,25 +59,26 @@ Once your library is imported, you can use its components, directives and pipes 
   
 ```xml  
 <!-- You can now use your library component in app.component.html -->  
-<h1>  
-  {{title}}  
-</h1>  
-<sampleComponent></sampleComponent>  
+<div id="specify" class="content active">
+	<a class="btn btn-default" [popover]="popoverId">
+		 <i class="glyphicon glyphicon-cloud"></i>
+	</a>  
+</div>  
+
+<ngm-popover #popoverId placement="auto">   
+ <b>Very</b> <span style="color: #C21F39">Dynamic</span>
+ <span style="color: #00b3ee">Reusable</span>  
+ <b><i><span style="color: #ffc520">Popover With</span></i></b>  
+ <small> Html support</small>  
+  and <span style="color: #C21F39"> autoposition</span>.  
+  <b>Very</b> <span style="color: #C21F39">Dynamic</span> <span style="color: #00b3ee">Reusable</span>  
+ <b><i><span style="color: #ffc520">Popover With</span></i></b>  
+ <small> Html support</small>  
+  and <span style="color: #C21F39"> autoposition</span>.  
+</ngm-popover>
 ```  
   
-## Development  
-  
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:  
-  
-```bash  
-$ npm run build  
-```  
-  
-To lint all `*.ts` files:  
-  
-```bash  
-$ npm run lint  
-```  
+
   
 ## License  
   
